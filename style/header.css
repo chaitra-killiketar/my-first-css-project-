@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+     padding-top: 80px;
+     padding-left: 96px;
+     padding-right: 24px;
+     height: 2000px;
+     background-color: rgb(248, 248, 248);
+}
+
+.header{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: rgb(238, 236, 236);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+}
+
+/* sub parts of left section */
+.hamburger-menu{
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 20px;
+}
+
+.youtube-logo{
+     height: 20px;
+   
+}
+
+/* middle section */
+.middle-section{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* sub parts of middle section */
+.search-bar{
+   flex: 1; 
+   /* its means it shrink bcz we used width */
+   width: 0;
+   height: 40px;
+   padding-left: 10px;
+   font-size: 16px;
+   /* border-width, border-style,border-color */
+   border: 1px solid  rgb(201, 201, 201) ;
+   border-radius:2px;
+   box-shadow: inset 1px 2px 3px rgb(0,0,0,0.05);
+} 
+ .search-barr::placeholder{
+    font-family: Roboto,arial;
+    font-size: 16px;
+}
+
+/* .search-button */
+.search-button{
+    height: 40px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid  rgb(192,192,192) ;
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+/* relative position */
+.search-button,.voice-button,.upload-icon-container,.notification{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* absolute position */
+.search-button .tooltip,
+.voice-button .tooltip,
+.upload-icon-container .tooltip,
+.notification .tooltip{
+    position: absolute;
+    background-color: gray;
+    font-family: Roboto,Arial;
+    color: white;
+    padding-top: 4px;
+    padding-bottom:4px;
+    padding-left:8px;
+    padding-right:8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom:-30px;
+    opacity:0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* using hover  */
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.upload-icon-container:hover .tooltip
+,.notification:hover .tooltip{
+opacity: 1;
+}
+.search{
+    height: 25px;
+    margin-top: 4px;
+
+}
+.voice-button{
+ height: 40px;
+ width: 40px;
+ border-radius: 20px;
+ border: none;
+ background-color: rgb(248, 248, 248);;
+}
+
+.voice-search{
+    height: 24px;
+    margin-top: 4px;
+}
+
+/* rigth section */
+.right-section{
+     width: 200px;
+     margin-right: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     /* it doesn't shrink */
+     flex-shrink: 0;
+}
+
+/* sub parts of right section */
+.video-icon{
+    height: 24px;
+    width: 40px;
+}
+
+.grid-icon{
+     height: 24px;
+}
+.bell{
+     height: 24px;
+}
+
+.dp-icon{
+    height: 30px;
+    border-radius:32px;
+    width: 30px;
+}
+
+.notification{
+    position:relative
+}
+
+.notification-count{
+    position:absolute ;
+    top:-2px;
+    right: -5px;
+    background-color: rgb(216, 45, 45);
+    color: white;
+    font-family: Roboto,Arial;
+    font-size: 11px;
+    border-radius:10px;
+    padding-left: 5px;
+    padding-right:5px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+
+
+/* sibe bar */
+.side-bar{
+    width: 72px;
+    bottom: 0;
+    left: 0;
+    top: 55px;
+    position: fixed;
+    z-index: 300;
+    background-color: white;
+    padding-top: 5px;
+}
+
+.sidebar-link{    
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+
+.sidebar-link:hover{
+    background-color: rgb(235, 234, 234);
+}
+
+.sidebar-link img{
+    height:24px;
+    margin-bottom: 7px;
+
+}
+
+.sidebar-link div{
+  font-family: Roboto,Arial;
+  font-size: 10px;
+  
+}
